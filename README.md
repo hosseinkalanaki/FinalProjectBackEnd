@@ -1,9 +1,5 @@
 # FinalProjectBackEnd
 
-
-```markdown
-
-
 ## Introduction
 
 This repository contains the backend implementation of the Final Project, developed using **.NET Core 8**.
