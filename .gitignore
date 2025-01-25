@@ -2,4 +2,8 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/MyApp/v17
+/.vs/*
+/.git/*
+bin
+obj
+

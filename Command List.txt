@@ -1,0 +1,61 @@
+--------------------------------------------
+			Server Configuration			
+--------------------------------------------
+Ip Address	:	87.107.54.138
+Port		:	9011
+Username	:	root
+Password	:	Dpi@fianl@project
+############################################
+
+--------------------------------------------
+			  Server Command
+--------------------------------------------
+Update Server				:	sudo apt update
+Upgrade Server				:	sudo apt upgrade
+Install nginx				:	sudo apt install nginx
+Install cerboot for ssl		:	sudo apt install certbot
+set domain on server		:	sudo certbot --nginx -d hvgk.lol -d www.hvgk.lol
+
+Install Requierment Docker	:	sudo apt install apt-transport-https ca-certificates curl software-properties-common
+Install Docker				:	sudo snap install docker
+Set Configuration for fix filtering 	:
+	sudo bash -c 'cat > /var/snap/docker/current/config/daemon.json <<EOF
+	{
+		"insecure-registries" : ["https://docker.arvancloud.ir"],
+		"registry-mirrors": ["https://docker.arvancloud.ir"]
+	}
+	EOF'
+pull sql server image		:	sudo docker pull mcr.microsoft.com/mssql/server:2019-latest
+
+run sql server container	:	
+	sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Dpi@FinalProject" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+############################################
+
+
+
+--------------------------------------------
+	  Dockerize Stimulation Command
+--------------------------------------------
+Dockerize stimulation		:	docker build -t sensor-simulation:1.0.1 .
+Run Image					:	docker run -d -p 1100:8080 --name sensor-simulation1 sensor-simulation:1.0.1
+Get Export					:	docker save --output sensor-simulation1.0.1.tar sensor-simulation:1.0.1
+############################################
+
+
+--------------------------------------------
+		Dockerize Client Website
+--------------------------------------------
+Dockerize stimulation		:	docker build -t sensor-client:1.0.0 .
+Run Image					:	docker run -d -p 8080:80 --name sensor-client sensor-client:1.0.0
+Get Export					:	docker save --output sensor-client1.0.0.tar sensor-client:1.0.0
+############################################
+
+
+--------------------------------------------
+		Run Publish On Server
+--------------------------------------------
+Run Sensor simulation 		:	docker image load -i sensor-simulation1.0.1.tar
+Run Sensor simulation 		:	docker image load -i sensor-client1.0.0.tar
+############################################
+
+

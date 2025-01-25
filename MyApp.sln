@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{E9942B14-2C65-4C81-9BA8-64A85E565D5F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRWebpack", "SignalRWebpack\SignalRWebpack.csproj", "{2D86E125-03F7-4AEA-AD67-9285D3752D8D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AppData", "AppData", "{D5EA5E65-D7AE-4983-BA67-60B8898718D9}"
+	ProjectSection(SolutionItems) = preProject
+		Add Center Query.sql = Add Center Query.sql
+		Add Module Query.sql = Add Module Query.sql
+		Command List.txt = Command List.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9942B14-2C65-4C81-9BA8-64A85E565D5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9942B14-2C65-4C81-9BA8-64A85E565D5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9942B14-2C65-4C81-9BA8-64A85E565D5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9942B14-2C65-4C81-9BA8-64A85E565D5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D86E125-03F7-4AEA-AD67-9285D3752D8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D86E125-03F7-4AEA-AD67-9285D3752D8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D86E125-03F7-4AEA-AD67-9285D3752D8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D86E125-03F7-4AEA-AD67-9285D3752D8D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5D0C9090-8A6E-4F48-8243-291F5D35C210}
+	EndGlobalSection
+EndGlobal
