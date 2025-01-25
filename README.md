@@ -96,8 +96,3 @@ http://localhost:5000
 ## Contributing
 
 We welcome contributions! Please ensure all changes follow the project's coding standards and best practices. Open a pull request for review.
-
-## License
-
-This project is licensed under the MIT License. For details, see the `LICENSE` file.
-``` 
