@@ -36,6 +36,8 @@ run sql server container	:
 --------------------------------------------
 	  Dockerize Stimulation Command
 --------------------------------------------
+On wsl
+----------
 Dockerize stimulation		:	docker build -t sensor-simulation:1.0.1 .
 Run Image					:	docker run -d -p 1100:8080 --name sensor-simulation1 sensor-simulation:1.0.1
 Get Export					:	docker save --output sensor-simulation1.0.1.tar sensor-simulation:1.0.1
@@ -45,9 +47,16 @@ Get Export					:	docker save --output sensor-simulation1.0.1.tar sensor-simulati
 --------------------------------------------
 		Dockerize Client Website
 --------------------------------------------
-Dockerize stimulation		:	docker build -t sensor-client:1.0.0 .
-Run Image					:	docker run -d -p 8080:80 --name sensor-client sensor-client:1.0.0
-Get Export					:	docker save --output sensor-client1.0.0.tar sensor-client:1.0.0
+On windows
+----------
+Build Angular				:	ng build
+
+On wsl
+----------
+go to project root			:	cd '/mnt/d/Kalanaki/University Final Project/Client'
+Dockerize stimulation		:	docker build -t sensor-client:1.1.0 .
+Run Image					:	docker run -d -p 8080:80 --name sensor-client sensor-client:1.1.0
+Get Export					:	docker save --output sensor-client1.0.0.tar sensor-client:1.1.0
 ############################################
 
 
