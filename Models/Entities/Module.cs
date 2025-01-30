@@ -50,6 +50,13 @@ public partial class Module : BaseEntity
 	public int ModuleNumber { get; set; }
 	#endregion /public int ModuleNumber { get; set; }
 
+	#region public string? ModuleName { get; set; }
+	/// <summary>
+	/// ModuleName
+	/// </summary>
+	public string? ModuleName { get; set; }
+	#endregion /public string? ModuleName { get; set; }
+
 	#region public bool IsTemp { get; set; }
 	/// <summary>
 	/// IsTemp

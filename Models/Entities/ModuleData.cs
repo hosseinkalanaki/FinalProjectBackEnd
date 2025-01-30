@@ -10,7 +10,7 @@ public partial class ModuleData : BaseEntity
 	public ModuleData(
 		Guid ownerId,
 		Guid moduleId,
-		int value
+		double value
 		) : base(ownerId)
 	{
 		Value = value;
@@ -20,12 +20,12 @@ public partial class ModuleData : BaseEntity
 
 	#region Properties
 
-	#region public int Value { get; set; }
+	#region public double Value { get; set; }
 	/// <summary>
 	/// Value
 	/// </summary>
-	public int Value { get; set; }
-	#endregion /public int Value { get; set; }
+	public double Value { get; set; }
+	#endregion /public double Value { get; set; }
 
 	#endregion /Properties
 
