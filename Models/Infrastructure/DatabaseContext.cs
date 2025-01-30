@@ -5,12 +5,9 @@ using Microsoft.Extensions.Configuration;
 namespace Models.Infrastructure;
 public class DatabaseContext : DbContext
 {
-	private readonly IConfiguration _configuration;
-
-	public DatabaseContext(DbContextOptions<DatabaseContext> options, IConfiguration configuration)
-		: base(options)
+	public DatabaseContext()
+		: base()
 	{
-		_configuration = configuration;
 	}
 
 	public virtual DbSet<Center> Centers { get; set; }
@@ -19,14 +16,11 @@ public class DatabaseContext : DbContext
 
 	protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 	{
-		if (!optionsBuilder.IsConfigured)
-		{
-			var connectionString = _configuration
-				.GetConnectionString(
-				"Server=87.107.54.138,1433;User ID=sa;Password=Dpi@FinalProject;Database=DPIDB;MultipleActiveResultSets=true;TrustServerCertificate=True;"
-				);
-			optionsBuilder.UseSqlServer(connectionString);
-		}
+		var connectionString =
+		"Server=87.107.54.138,1433;User ID=sa;Password=Dpi@FinalProject;Database=DPIDB;MultipleActiveResultSets=true;TrustServerCertificate=True;";
+
+		optionsBuilder.UseSqlServer
+			(connectionString: connectionString);
 	}
 
 	protected override void OnModelCreating(ModelBuilder modelBuilder)

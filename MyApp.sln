@@ -16,7 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AppData", "AppData", "{D5EA
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModel", "ViewModel\ViewModel.csproj", "{3C23A4AB-1BFD-4278-B50B-FB7B470DC749}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViewModel", "ViewModel\ViewModel.csproj", "{3C23A4AB-1BFD-4278-B50B-FB7B470DC749}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

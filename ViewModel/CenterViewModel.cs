@@ -1,5 +1,12 @@
 ﻿public class CenterViewModel
 {
+	#region public Guid Id { get; set; }
+	/// <summary>
+	/// Id
+	/// </summary>
+	public Guid Id { get; set; }
+	#endregion /public Guid Id { get; set; }
+
 	#region public string CenterName { get; set; }
 	/// <summary>
 	/// CenterName
