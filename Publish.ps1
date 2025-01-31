@@ -1,8 +1,8 @@
 
 cd .\SignalRWebpack\
 
-if (Test-Path ".\bin\PhysicallyPublish") {
-    Remove-Item -Path ".\bin\PhysicallyPublish" -Recurse -Force
+if (Test-Path ".\bin\Publish") {
+    Remove-Item -Path ".\bin\Publish" -Recurse -Force
     Write-Host "Previous publish directory removed."
 }
 Write-Host "Clear Publish Director"

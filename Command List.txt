@@ -70,9 +70,9 @@ Build donet with command	:	.\Publish.ps1
 
 On wsl
 ----------
-go to project root			:	cd '/mnt/d/Kalanaki/University Final Project/Server/SignalRWebpack'
+go to project root			:	cd '/mnt/d/Kalanaki/University Final Project/Server/MyApp'
 Dockerize stimulation		:	docker build -t sensor-server:1.0.0 .
-Run Sensor simulation 		:	docker run -d -p 8090:80 --name sensor-server sensor-server:1.0.0
+Run Sensor simulation 		:	docker run -d -p 8090:80 --name sensor-server sensor-server:1.6.0
 Run Sensor simulation 		:	docker save --output sensor-server1.0.0.tar sensor-server:1.0.0
 ############################################
 
