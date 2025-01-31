@@ -106,6 +106,7 @@ public class BroadcastingService
 					IpAddress = current.IPAddress,
 					Port = current.Port
 				})
+				.OrderBy(current=>current.CenterName)
 				.ToListAsync();
 
 			foreach (var center in centerViewModel)
@@ -122,10 +123,12 @@ public class BroadcastingService
 					.Select(current => new SensorViewModel
 					{
 						Name = current.Module.ModuleName,
+						ModuleNumber=current.Module.ModuleNumber,
 						Type = current.Module.IsTemp ? "Temperature" : "Humidity",
 						Value = current.Value,
 						HasAlarm = current.Value < current.Module.Minimum || current.Value > current.Module.Maximum
 					})
+					.OrderBy(current=>current.ModuleNumber)
 					.ToList();
 			}
 

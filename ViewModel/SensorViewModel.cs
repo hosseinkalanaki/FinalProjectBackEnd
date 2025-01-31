@@ -7,6 +7,13 @@
 	public string Type { get; set; }
 	#endregion /public string Type { get; set; }
 
+	#region public int ModuleNumber { get; set; }
+	/// <summary>
+	/// ModuleNumber
+	/// </summary>
+	public int ModuleNumber { get; set; }
+	#endregion /public int ModuleNumber { get; set; }
+
 	#region public string Name { get; set; }
 	/// <summary>
 	/// Name
