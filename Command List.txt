@@ -36,11 +36,23 @@ run sql server container	:
 --------------------------------------------
 	  Dockerize Stimulation Command
 --------------------------------------------
+On windows
+----------
+Go to root					:	cd 'D:\Kalanaki\University Final Project\Simulation'
+Build Angular				:	python main.py
+
+
 On wsl
 ----------
-Dockerize stimulation		:	docker build -t sensor-simulation:1.0.1 .
-Run Image					:	docker run -d -p 1100:8080 --name sensor-simulation1 sensor-simulation:1.0.1
-Get Export					:	docker save --output sensor-simulation1.0.1.tar sensor-simulation:1.0.1
+Go to root					:	cd '/mnt/d/Kalanaki/University Final Project/Simulation'
+Dockerize stimulation		:	docker build -t sensor-simulation:2.0.0 .
+Run Image					:	docker run -d -p 1100:8080 --name sensor-simulation1 sensor-simulation:2.0.0
+Get Export					:	docker save --output sensor-simulation2.0.0.tar sensor-simulation:2.0.0
+
+On server
+-----------
+Load Image 					:	docker image load -i sensor-client2.0.0.tar
+Run							:	docker run -d --restart always -p 1180:8080 --name sensor-simulation1 sensor-simulation:2.0.0
 ############################################
 
 
@@ -53,10 +65,15 @@ Build Angular				:	ng build
 
 On wsl
 ----------
-go to project root			:	cd '/mnt/d/Kalanaki/University Final Project/Client'
-Dockerize stimulation		:	docker build -t sensor-client:1.1.0 .
-Run Image					:	docker run -d -p 8080:80 --name sensor-client sensor-client:1.1.0
-Get Export					:	docker save --output sensor-client1.1.0.tar sensor-client:1.1.0
+Go to root					:	cd '/mnt/d/Kalanaki/University Final Project/Client'
+Dockerize			 		:	docker build -t sensor-client:2.0.0 .
+Run Image					:	docker run -d -p 80:80 --name sensor-client sensor-client:2.0.0
+Get Export					:	docker save --output sensor-client2.0.0.tar sensor-client:2.0.0
+
+On server
+-----------
+Load Image 					:	docker image load -i sensor-client2.0.0.tar
+Run							:	docker run -d --restart always -p 80:80 --name sensor-client sensor-client:2.0.0
 ############################################
 
 
@@ -70,10 +87,15 @@ Build donet with command	:	.\Publish.ps1
 
 On wsl
 ----------
-go to project root			:	cd '/mnt/d/Kalanaki/University Final Project/Server/MyApp'
-Dockerize stimulation		:	docker build -t sensor-server:1.0.0 .
-Run Sensor simulation 		:	docker run -d -p 8090:80 --name sensor-server sensor-server:1.6.0
-Run Sensor simulation 		:	docker save --output sensor-server1.0.0.tar sensor-server:1.0.0
+Go to root					:	cd '/mnt/d/Kalanaki/University Final Project/Server/SignalRWebpack'
+Dockerize					:	docker build -t sensor-server:2.0.0 .
+Run Image					:	docker run -d -p 8090:80 --name sensor-server sensor-server:2.0.0
+Get Export				 	:	docker save --output sensor-server2.0.0.tar sensor-server:2.0.0
+
+On server
+-----------
+Load Image 					:	docker image load -i sensor-server2.0.0.tar
+Run							:	docker run -d --restart always -p 8090:80 --name sensor-server sensor-server:2.0.0
 ############################################
 
 
